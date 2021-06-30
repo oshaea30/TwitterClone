@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% load cloudinary %}   
+   
+
+
+
+<div class="container">
+<div class="main-header">
+    <a class="title-icon" href=""><img src="static/img/Ironlogo.png" class="logo"><span class="font-primary">Twiclone</span></a>  
+<div class="content">
+    <div class="post_form">
+       <form action="/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name" required>
+        <textarea name="body" placeholder="What's happening?" required></textarea>
+        <input class="form-control form-control-sm" name="image" type="file">
+        <input type="submit" value="Post" />
+       
+    </form> 
+    <div class="ditch"></div>
+        <div class="posts"> 
+        <ul>
+            {% for post in posts %}
+            <li>
+                <div class="usericon">
+                    <i class="fas fa-user-astronaut fa-3x"></i>
+            </div>
+            <div class="name_body">
+                <div class="name">{{post.name}}</div>
+                <div class="datetime"> {{post.created_at}}</div>
+                <p>{{post.body}}</p>
+                <a href="{{post.image.url}}" target="_blank"></a
+                ><img  src="{{post.image.url}}" style="width: 200px" />
+              </a> 
+              <div class="likecount">
+                <i></i> 
+               <a name="like" href="/like/{{ post.id }}/"><img src=static/img/heart-992.png class="likeicon"></a> {{post.like_count}}
+              </div> 
+               <div id="hover" href="#">
+                    <i class="fas fa-ellipsis-h"><a href="#"></a></i> 
+                    <div id="popup">
+                        <a href="/delete/{{ post.id }}/">Delete</a>
+                        <a href="/edit/{{ post.id }}">Edit</a>
+
+                    </div> 
+                </div>
+                
+                
+            </div>     
+         </li>
+        {% endfor %}
+        </ul>
+    </div>    
+</div>
+</div>  
+</div>
+
+
+
+
+{% endblock %}
+

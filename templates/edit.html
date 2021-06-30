@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% load cloudinary %}   
+
+
+
+
+        
+    <div class="content">
+        <div class="post_form">
+           <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.name}}<br>
+            {{form.body}}<br>
+            {{form.image}}<br>
+            <input type="submit" value="Post" />
+           
+        </form> 
+        <div class="ditch"></div>
+
+{% endblock %}
