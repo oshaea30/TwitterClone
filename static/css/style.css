@@ -49,6 +49,7 @@ Post
 }
 
 .post_form {
+    padding-left: 20px;
     width: 100%;
     max-width: 600px;
     border-width: 3px;
