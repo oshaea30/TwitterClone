@@ -11,15 +11,18 @@ Common
 }
 html,
 body{
-   background-color: rgb(0, 0, 0);
-   height: 100%;
+    background-image: rgb(161, 163, 187);
+    height: 100%;
 }
 .main-header{
     padding: 0;
     min-height: 100%;
     justify-content: center;
 }
-
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
 /*
 Post
 ******************************/
@@ -34,18 +37,12 @@ Post
     font-family:'Times New Roman', Times, serif;
     letter-spacing: 5px;
    font-weight: bold;
-   background-image: linear-gradient(
-	to right,
-	#462523 0,
-       	#cb9b51 22%, 
-	#f6e27a 45%,
-	#f6f2c0 50%,
-	#f6e27a 55%,
-	#cb9b51 78%,
-	#462523 100%
-	);
+   background-color: #2a2a72;
+
+   background-image: linear-gradient(315deg, #2a2a72 0%, #5ebff7 74%);
    color:transparent;
    -webkit-background-clip: text;
+   position: fixed;
 }
 
 .post_form {
@@ -57,7 +54,7 @@ Post
     border-image: 
     linear-gradient(
       to bottom, 
-      rgba(255, 196, 0, 0.575), 
+      rgba(83, 200, 255, 0.575), 
       rgba(0, 0, 0, 0)
     ) 1 100%;
     margin-top: 10%;
@@ -80,13 +77,11 @@ Post
     line-height: 2.5em;
     text-transform: uppercase;
     padding: 0 1em;
-    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(110,80,20,.4),
-                inset 0 -2px 5px 1px rgba(139,66,8,1),
-                inset 0 -1px 1px 3px rgba(250,227,133,1);
-    background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
-    border: 1px solid #a55d07;
-    color: rgb(120,50,5);
-    text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #5ebff7 74%);
+    border: none;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 2px 2px rgb(255, 255, 255);
     cursor: pointer;
     transition: all .2s ease-in-out;
     background-size: 100% 100%;
@@ -94,11 +89,9 @@ Post
   }
   .post_form input[type=submit]:hover{
   background-size: 150% 150%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23),
-                inset 0 -2px 5px 1px #b17d10,
-                inset 0 -1px 1px 3px rgba(250,227,133,1);
-  border: 1px solid rgba(165,93,7,.6);
-  color: rgba(120,50,5,.8);
+  background-color: #2a2a72;
+
+   background-image: linear-gradient(315deg, #2a2a72 0%, #5ebff7 74%);
 }
 
 .post_form input[type=text]{
@@ -106,7 +99,8 @@ Post
     height: 40px;
     margin-bottom: 20px;
     resize: none;
-    border: solid #ccc;
+    border-radius: .3em;
+    border: none;
     
    
     
@@ -116,21 +110,23 @@ Post
     margin: 0px;
     height: 91px;
     resize: none;
-    border: solid #ccc;
+    border-radius: .3em;
+    border: none;
 }
 
 .post_form input[type=file]{
-    padding-top: 20px;
+    padding: 20px;
     display: block;
     width: 50vh;
-    padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #635d5d;
-    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    background-color: #2a2a72;
+
+    background-image: linear-gradient(315deg, #2a2a72 0%, #5ebff7 74%);
     background-clip: padding-box;
-    border: 1px solid rgba(255, 196, 0, 0.575);
+    border: none;
     -webkit-appearance: none;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -150,16 +146,9 @@ Post
 
 .posts li .usericon {
     flex-basis: 15%;
-    background-image: linear-gradient(
-        to right,
-        #462523 0,
-               #cb9b51 22%, 
-        #f6e27a 45%,
-        #f6f2c0 50%,
-        #f6e27a 55%,
-        #cb9b51 78%,
-        #462523 100%
-        );
+    background-color: #2a2a72;
+
+   background-image: linear-gradient(315deg, #2a2a72 0%, #5ebff7 74%);
        color:transparent;
        -webkit-background-clip: text;
 }
@@ -172,16 +161,9 @@ Post
     font-family:'Times New Roman', Times, serif;
     letter-spacing: 5px;
    font-weight: bold;
-   background-image: linear-gradient(
-	to right,
-	#462523 0,
-       	#cb9b51 22%, 
-	#f6e27a 45%,
-	#f6f2c0 50%,
-	#f6e27a 55%,
-	#cb9b51 78%,
-	#462523 100%
-	);
+   background-color: #2a2a72;
+
+   background-image: linear-gradient(315deg, #2a2a72 0%, #5ebff7 74%);
    color:transparent;
    -webkit-background-clip: text;
 }
@@ -197,17 +179,17 @@ Post
 }
 .ditch{
     height: 15px;
-    border-top: 1px solid rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
-    background-color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    border-bottom: 1px solid rgb(173, 173, 173);
 }
 p{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 #hover {
-    background: #000000;
+    background: #ffffff;
     padding: 6px;
     display: block;
     position: relative;
@@ -225,7 +207,8 @@ p{
     opacity: 0;
     position: absolute;
     top: 32px;
-    background: #fafafa;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
     border: 1px solid transparent;
     border-radius: 6px;
     height: 0px;
@@ -240,14 +223,14 @@ p{
     padding: 12px 12px;
     height: auto;
     opacity: 1;
-    border: 1px solid #eeeeee;
+    border: 1px solid #ffffff;
 }
 .fa-ellipsis-h{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .likecount{
-    color:#eeeeee;
+    color:#000000;
 }
 img .likeicon{
     color: red;
